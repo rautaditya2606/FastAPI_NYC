@@ -70,26 +70,26 @@ uvicorn app:app --reload --port 8000
 **cURL single prediction:**
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/predict" \
--H "Content-Type: application/json" \
--d '{
-  "pickup_longitude": -73.985428,
-  "pickup_latitude": 40.748817,
-  "dropoff_longitude": -73.985428,
-  "dropoff_latitude": 40.748817,
-  "passenger_count": 1,
-  "pickup_datetime_year": 2023,
-  "pickup_datetime_month": 8,
-  "pickup_datetime_day": 4,
-  "pickup_datetime_weekday": 1,
-  "pickup_datetime_hour": 14,
-  "trip_distance": 2.5,
-  "jfk_drop_distance": 20.3,
-  "lga_drop_distance": 15.7,
-  "ewr_drop_distance": 30.2,
-  "met_drop_distance": 5.0,
-  "wtc_drop_distance": 10.0
-}'
+curl -X POST http://localhost:8080/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+    "pickup_longitude": -73.985,
+    "pickup_latitude": 40.758,
+    "dropoff_longitude": -73.985,
+    "dropoff_latitude": 40.748,
+    "passenger_count": 1,
+    "pickup_datetime_year": 2016,
+    "pickup_datetime_month": 6,
+    "pickup_datetime_day": 15,
+    "pickup_datetime_weekday": 3,
+    "pickup_datetime_hour": 9,
+    "trip_distance": 2.1,
+    "jfk_drop_distance": 20.0,
+    "lga_drop_distance": 10.0,
+    "ewr_drop_distance": 25.0,
+    "met_drop_distance": 5.0,
+    "wtc_drop_distance": 6.0
+  }'
 ```
 
 **Response:**
