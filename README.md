@@ -70,7 +70,7 @@ uvicorn app:app --reload --port 8000
 **cURL single prediction:**
 
 ```bash
-curl -X POST http://localhost:8080/predict \
+curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{
     "pickup_longitude": -73.985,
